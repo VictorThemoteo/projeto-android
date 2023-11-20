@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: idroid;
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+main{
+    min-width: 400px;
+    max-width: 800px;
+   }
+   :root{
+    --cor0: #c5ebd6;
+    --cor01: #83e1ad;
+    --cor02: #3ddc84;
+    --cor03: #2fa866;
+    --cor04: #1a5c37;
+    --cor05: #063d1e;
+    --font-padrão: Arial, verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', 'cursive';
+    --font-android: 'idroid', sans-serif;
+   }
+
+   *{
+    margin: 0px;
+    padding: 0px;
+   }
+   
+   body{
+    font-family: var(--font-padrão);
+    background-color: var(--cor0);
+   }
+
+   a.externo::after{
+    content: '\00A0\1F517';  /*esse 00A0 é um espaçamento*/
+   }
+
+
+   header{
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor05));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+   }
+
+   header > h1{
+    color: white;
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.514);
+   }
+   header > p{
+    color: white;
+    font-family: var(--font-padrão);
+    font-size: 1.2em;
+    max-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.514);
+   }
+
+   nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.438);
+   }
+
+   nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition-duration: .7s; /*duração da animação quando se passa o mouse por cima*/
+   }
+
+   nav > a:hover{
+    background-color: var(--cor02);
+    color: var(--cor04)
+   }
+
+   main{
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    min-width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+   }
+
+   div.video{
+    background-color: #063d1e;/*essas div de vídeo são as configs pra deixar responsivo  lembrar delas em cavalo imundo e não esquecer que as medidas em % e talvez uns ajustes de padding top e bootom*/
+    margin-bottom: 30px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+   }
+
+   div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+   }
+
+   main h1{
+    color: var(--cor05);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.6em;
+    padding: 20px;
+   }
+
+   main p{
+    margin: 15px 0px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 1.5em;
+   }
+
+   main strong{
+    color: var(--cor04);
+    font-weight: bold;
+    padding: 2px 2px;
+   }
+
+   main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor05);
+    background-color: var(--cor01);
+    padding: 2px 5px;
+   }
+
+  main a:hover{
+    text-decoration: underline;
+    color: var(--cor03);
+  }
+
+   main h2{
+    font-family: var(--font-android);
+    color: var(--cor04);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor03), transparent);
+    text-indent: 10px;
+   }
+   main > img{
+    width: 100% /*Assim a imagem se ajusta automaticamente sem ter que fazer aquele source todo com imagens diferentes*/
+   }
+
+   main  img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+   }
+
+   aside{
+    background-color: var(--cor01);
+    padding: 10px;
+    border-radius: 10px; /*faz arredondar as bordas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.452);
+   }
+
+   aside > h3{
+    background-color: var(--cor04);
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*o que fez a margem ficar encostada foi esse atributo negativo em cima, direita e esquerda*/
+    border-radius: 10px 10px 0px 0px;
+   }
+
+   aside > ul{
+    list-style: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0'; /*Não sei pq mas se eu colocasse esse comando como o primeiro acima do list style ele não funcionava mas aqui em baixo funciona e esse comando list style type não funciona com todo navegador os emotes colocados*/
+   }
+
+   footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+   }
+
+   footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+   }
+
+   footer a:hover{
+    text-decoration: underline;
+    color: var(--cor01);
+   }
+
+   
+
+  
